@@ -209,9 +209,8 @@ public class BookModel
         conn.Open();
         try
         {
-            int i = cmd.ExecuteNonQuery();
-            if (i > 0)
-                Console.WriteLine("Registro deletado com sucesso!");
+            cmd.ExecuteNonQuery();
+            
         }
         catch (Exception ex)
         {

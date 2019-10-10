@@ -26,7 +26,6 @@ export class BookComponent implements OnInit {
     this.bookService.listBook().subscribe(
       response => {
         this.books = response
-        
       }, 
       error => {
         alert("There is something wrong :/")
@@ -40,7 +39,9 @@ export class BookComponent implements OnInit {
       accept: () => {
         this.bookService.delete(id).subscribe(
           r => {
-            this.listBook()
+            console.log(this.listBook);
+            this.listBook();
+            
           }
         )
       }

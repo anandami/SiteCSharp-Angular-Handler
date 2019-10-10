@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Data;
 using System.Web;
 using System.Web.Http.Cors;
+using System.Web.Script.Serialization;
+
 
 [EnableCors("*", "*", "*", "*")]
 public class HandlerBook : IHttpHandler {
@@ -15,20 +17,18 @@ public class HandlerBook : IHttpHandler {
         string methodname = string.Empty;
         methodname = context.Request.Params["method"];
 
+        context.Response.ContentType = "application/json";
+        context.Response.AddHeader("Access-Control-Allow-Methods", "PUT,GET,POST,DELETE,OPTIONS");
+        context.Response.AddHeader("Access-Control-Allow-Headers", "*");
+        context.Response.AddHeader("Access-Control-Allow‌​-Credentials", "true");
+        context.Response.AddHeader("Access-Control-Allow-Origin", "http://localhost:4200");
+        context.Response.AddHeader("Access-Control-Allow-ExposedHeaders", "*");
+
+
         if (HttpContext.Current.Request.HttpMethod == "OPTIONS")
         {
             context.Response.StatusCode = 200;
             context.Response.End();
-            
-            context.Response.ContentType = "application/json";
-            context.Response.AddHeader("Access-Control-Allow-Methods", "*");
-            context.Response.AddHeader("Access-Control-Allow-Headers", "*");
-            context.Response.AddHeader("Access-Control-Allow‌​-Credentials", "true");
-            context.Response.AddHeader("Access-Control-Allow-Origin", "*");
-            context.Response.AddHeader("Access-Control-Allow-ExposedHeaders", "*");
-            
-
-
         }
 
         
@@ -126,13 +126,15 @@ public class HandlerBook : IHttpHandler {
 
     public string Delete(int id)
     {
-        string response = "Registro deletado com sucesso";
-
         BookModel book = new BookModel();
-
-        book.Delete(id);
        
-        return response;
+        book.Delete(id);
+
+        var response = new { resp= "Registro deletado com sucesso, no id " + id };
+       
+        JavaScriptSerializer serializer = new JavaScriptSerializer();
+        
+        return serializer.Serialize(response);
     }
 
 
