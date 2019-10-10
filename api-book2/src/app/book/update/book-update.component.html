@@ -1,0 +1,36 @@
+<h3 class="first">Update a book</h3>
+<div class="ui-g ui-fluid">
+    <div class="ui-g-12 ui-md-4">
+        <div class="ui-inputgroup">
+            <input type="text" pInputText placeholder="title" [(ngModel)]="book.Title">       
+        </div>
+    </div>
+    <div class="ui-g-12 ui-md-4">
+        <div class="ui-inputgroup">
+            <input type="text" pInputText placeholder="author" [(ngModel)]="book.Author">         
+        </div>
+    </div>
+    <div class="ui-g-12 ui-md-4">
+        <div class="ui-inputgroup">
+            <input type="number" pInputText placeholder="release" [(ngModel)]="book.Release">         
+        </div>
+    </div>
+    <div class="ui-g-12 ui-md-4">
+        <div class="ui-inputgroup">
+            <input type="text" pInputText placeholder="publishingHouse" [(ngModel)]="book.PublishingHouse">         
+        </div>
+    </div>
+    <div class="ui-g-12 ui-md-4">
+        <div class="ui-inputgroup">
+            <input type="text" pInputText placeholder="category" [(ngModel)]="book.Category">         
+        </div>
+    </div>
+    <div class="ui-g-12 ui-md-4">
+        <div class="ui-inputgroup">
+            <input type="text" pInputText placeholder="description" [(ngModel)]="book.Description">         
+        </div>
+    </div>
+
+    <div>
+        <button pButton (click)="update(book.Id)" label="UPDATE"></button>
+    </div>

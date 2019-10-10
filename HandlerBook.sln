@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.779
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "HandlerBook", "HandlerBook\", "{6A01F84C-D7F1-4D38-9D5B-68028F2FBAFF}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_56618"
+		Debug.AspNetCompiler.PhysicalPath = "HandlerBook\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_56618\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_56618"
+		Release.AspNetCompiler.PhysicalPath = "HandlerBook\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_56618\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "56618"
+		SlnRelativePath = "HandlerBook\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6A01F84C-D7F1-4D38-9D5B-68028F2FBAFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A01F84C-D7F1-4D38-9D5B-68028F2FBAFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {64B24692-234F-4DC6-9502-C5E5A59D9452}
+	EndGlobalSection
+EndGlobal
