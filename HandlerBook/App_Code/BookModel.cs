@@ -1,13 +1,10 @@
-﻿using Newtonsoft.Json;
-using Npgsql;
+﻿using Npgsql;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Web;
-using System.Web.Http;
 using System.Web.Http.Cors;
 
- 
+
 [EnableCors("*", "*", "*", "*")]
 public class BookModel
 {

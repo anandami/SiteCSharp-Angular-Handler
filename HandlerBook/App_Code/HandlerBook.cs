@@ -1,8 +1,5 @@
 ﻿using Newtonsoft.Json;
-using Npgsql;
 using System;
-using System.Collections.Generic;
-using System.Data;
 using System.Web;
 using System.Web.Http.Cors;
 using System.Web.Script.Serialization;
@@ -10,7 +7,6 @@ using System.Web.Script.Serialization;
 
 [EnableCors("*", "*", "*", "*")]
 public class HandlerBook : IHttpHandler {
-    
 
     public void ProcessRequest(HttpContext context)
     {
@@ -24,6 +20,10 @@ public class HandlerBook : IHttpHandler {
         context.Response.AddHeader("Access-Control-Allow-Origin", "http://localhost:4200");
         context.Response.AddHeader("Access-Control-Allow-ExposedHeaders", "*");
 
+        if (methodname == null)
+        {
+            methodname = "getall";
+        }
 
         if (HttpContext.Current.Request.HttpMethod == "OPTIONS")
         {
